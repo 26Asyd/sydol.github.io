@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  background-color: #2e3648;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+  padding-bottom: 20px;
+}
+#navbar {
+  background-color: #0a071d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#intro {
+  display: block;
+  position: relative;
+}
+
+#textIntro {
+  color: #0f2843;
+  background-color:rgba(244, 230, 194, 0.5);
+  font-size: large;
+  font-weight: bold;  
+}
+
+.competences, .formation, .travaux{
+  color: #b3c2d3;
+  text-align: center;
+}
+
+.accordion-body, .card-body{
+  background-color: #586c82;
+}
+
+.form-control {
+  color: #586c82;
+}
+
+
+#mailme{
+  background-color: rgb(45, 207, 236);
+}
+
+#map {
+  width: 100%;
+  height: 80vh;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+
+/*Barre deroulante des competences*/
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  background-color: #586c82;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5%;
+  width: 100%;
+}
+
+.scroll-container img {
+  width: 10%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.scroll-container img:last-child {
+  margin-right: 0;
+}
+
+.scroll-container img {
+  animation: scroll 10s linear infinite;
+}
+
+.formation {
+  text-align: center;
+}
+
+/*Barre deroulante des competences*/
+
+.FormPopup {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  width: 80%;
+  height: 10vh;
+}
+
+.FormPopup .FormPopuptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #2e3648;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.FormPopup .FormPopuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.FormPopup:hover .FormPopuptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Style pour la barre de séparation */
+.section-divider {
+  border-bottom: 2px solid #ddd;
+  /* Couleur de la barre */
+  margin-bottom: 40px;
+  /* Marge en dessous de la barre pour l'espace */
+}
+
+/* Style pour la section de contact */
+.contact {
+  background-color: #b3c2d3;
+  /* Couleur d'arrière-plan */
+  padding: 60px 0;
+  /* Espace intérieur autour du contenu */
+  border-radius: 10px;
+  /* Coins arrondis */
+}
+
+.greeting-box {
+  background-color: #ffffff;
+  /* Couleur d'arrière-plan de la boîte de salutation */
+  padding: 30px;
+  /* Espace intérieur de la boîte de salutation */
+  border-radius: 8px;
+  /* Coins arrondis de la boîte de salutation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+}
+
+.greeting-text {
+  color: #333;
+  /* Couleur du texte de salutation */
+}
+
+.explore-link a {
+  color: #007bff;
+  /* Couleur du lien "Explore More" */
+}
+
+.explore-link a:hover {
+  text-decoration: underline;
+  /* Souligner au survol */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #333;
+  /* Couleur des icônes de médias sociaux */
+  font-size: 24px;
+  /* Taille de police des icônes */
+  transition: color 0.3s ease;
+  /* Transition de couleur au survol */
+}
+
+.social-links a:hover {
+  color: #007bff;
+  /* Couleur des icônes de médias sociaux au survol */
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  /* Ajuste la taille de l'image de fond */
+  background-position: center;
+  /* Centre l'image de fond */
+  background-attachment: fixed;
+  /* Fait en sorte que l'image reste fixe lors du défilement */
+  color: #fff;
+  /* Couleur du texte */
+  text-align: center;
+  padding: 100px 0;
+  /* Espace intérieur autour du contenu */
+}
+
+/* Style pour le texte de la section hero */
+.hero-text {
+  max-width: 600px;
+  /* Largeur maximale du texte */
+  margin: 0 auto;
+  /* Centre le texte horizontalement */
+}
+
+/* Style pour la popup */
+.popup {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les images */
+.popup-trigger {
+  cursor: pointer;
+  /* Ajoutez d'autres styles selon vos besoins */
+}
