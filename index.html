@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <script src="js/script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -27,9 +27,12 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
 </head>
 
 
@@ -465,68 +468,69 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="section-divider"></div>
+    <div class="section-divider"></div>
 
-            <section class="contact section-padding pt-0" id="contact">
-                <div class="container">
-                    <div class="row">
+    <section class="contact section-padding pt-0" id="contact">
+        <div class="container">
+            <div class="row">
 
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <form action="php/process-form.php" method="post" class="contact-form webform" role="form">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <form action="php/process-form.php" method="post" class="contact-form webform" role="form">
 
-                                <div class="form-group d-flex flex-column-reverse">
-                                    <input type="text" class="form-control" name="cf-name" id="cf-name"
-                                        placeholder="Your Name">
+                        <div class="form-group d-flex flex-column-reverse">
+                            <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name">
 
-                                    <label for="cf-name" class="webform-label"> Nom Prénom </label>
-                                </div>
-
-                                <div class="form-group d-flex flex-column-reverse">
-                                    <input type="email" class="form-control" name="cf-email" id="cf-email"
-                                        placeholder="Your Email">
-
-                                    <label for="cf-email" class="webform-label"> Email </label>
-                                </div>
-
-                                <div class="form-group d-flex flex-column-reverse">
-                                    <textarea class="form-control" rows="5" name="cf-message" id="cf-message"
-                                        placeholder="Your Message"></textarea>
-
-                                    <label for="cf-message" class="webform-label"> Message </label>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary" id="submit-button" name="submit"> Envoyer
-                                </button>
-                            </form>
+                            <label for="cf-name" class="webform-label"> Nom Prénom </label>
                         </div>
 
-                        <div class="mx-auto col-lg-4 col-md-6 col-12">
-                            <div class="greeting-box my-4 pt-4 pt-lg-0">
-                                <h3 class="greeting-text">Dites bonjour</h3>
+                        <div class="form-group d-flex flex-column-reverse">
+                            <input type="email" class="form-control" name="cf-email" id="cf-email"
+                                placeholder="Your Email">
 
-                                <p class="mb-1">N'hésitez pas à nous contacter pour toute question ou information
-                                    supplémentaire.</p>
-
-                                <p class="explore-link">
-                                    <a href="index.html#">
-                                        <i class="fas fa-arrow-right custom-icon"></i> Explore More
-                                    </a>
-                                </p>
-
-                                <ul class="social-links mt-2">
-                                    <li><a href="https://fb.com/tooplate" rel="noopener" class="fab fa-facebook"></a>
-                                    </li>
-                                    <li><a href="index.html#" rel="noopener" class="fab fa-twitter"></a></li>
-                                    <li><a href="index.html#" rel="noopener" class="fab fa-instagram"></a></li>
-                                    <li><a href="index.html#" rel="noopener" class="fab fa-linkedin"></a></li>
-                                    <li><a href="index.html#" rel="noopener" class="fab fa-youtube"></a></li>
-                                </ul>
-                            </div>
+                            <label for="cf-email" class="webform-label"> Email </label>
                         </div>
+
+                        <div class="form-group d-flex flex-column-reverse">
+                            <textarea class="form-control" rows="5" name="cf-message" id="cf-message"
+                                placeholder="Your Message"></textarea>
+
+                            <label for="cf-message" class="webform-label"> Message </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" id="submit-button" name="submit"> Envoyer
+                        </button>
+                    </form>
+                </div>
+
+                <div class="mx-auto col-lg-4 col-md-6 col-12">
+                    <div class="greeting-box my-4 pt-4 pt-lg-0">
+                        <h3 class="greeting-text">Dites bonjour</h3>
+
+                        <p class="mb-1">N'hésitez pas à nous contacter pour toute question ou information
+                            supplémentaire.</p>
+
+                        <p class="explore-link">
+                            <a href="index.html#">
+                                <i class="fas fa-arrow-right custom-icon"></i> Explore More
+                            </a>
+                        </p>
+
+                        <ul class="social-links mt-2">
+                            <li><a href="https://fb.com/tooplate" rel="noopener" class="fab fa-facebook"></a>
+                            </li>
+                            <li><a href="index.html#" rel="noopener" class="fab fa-twitter"></a></li>
+                            <li><a href="index.html#" rel="noopener" class="fab fa-instagram"></a></li>
+                            <li><a href="index.html#" rel="noopener" class="fab fa-linkedin"></a></li>
+                            <li><a href="index.html#" rel="noopener" class="fab fa-youtube"></a></li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
 
 
