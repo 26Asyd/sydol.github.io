@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les régions de France (Métropole)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar navbar-dark bg-dark" style="background-color: #343a40;">
+        <div class="container-fluid">
+          <a class="navbar-brand mb-0 h1" href="#">France</a>
+          <img src="img/paris8.png" alt="Paris" class="ml-auto" height="30px" width="60px">
+        </div>
+      </nav>
+
+    </header>
+    
+    <main class="h-100 row m-0 p-0">
+      <div id="map" class="h-100 col-10 m-0 p-0">
+        <!-- map container -->
+      </div>
+
+      <div class="h-100 col-2 m-0 p-2">
+        <!-- la liste des couches -->
+        <div class="card mt-3">
+          <div class="card-header">La liste des couches :</div>
+          <div class="card-body">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="chef-lieux"
+              />
+              <label class="form-check-label" for="chef-lieux">
+                Chef-lieux
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="regions-france"
+                checked
+              />
+              <label class="form-check-label" for="regions-france">
+                Régions
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map-popup" class="ol-popup">
+        <a
+          href="#"
+          id="popup-closer"
+          class="ol-popup-closer"
+          onclick="closePopup()"
+        ></a>
+        <div id="map-popup-content"></div>
+      </div>
+    </main>
+    <footer class="footer mt-auto bg-dark">
+      <div class="container">
+        <small class="text-muted">M2G. 2024</small>
+      </div>
+    </footer>
+  </body>
+  <script src="js/functions.js"></script>
+  <script src="data/regions.js"></script>
+  <script src="js/app.js"></script>
+</html>
